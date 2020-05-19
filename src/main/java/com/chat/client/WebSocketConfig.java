@@ -3,8 +3,6 @@ package com.chat.client;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.converter.StringMessageConverter;
-import org.springframework.messaging.simp.SimpMessageSendingOperations;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
 
@@ -18,9 +16,5 @@ public class WebSocketConfig {
         stompClient.setMessageConverter(new StringMessageConverter());
         return stompClient;
     }
-
-//    public SimpMessagingTemplate sendingOperations() {
-//        return new SimpMessagingTemplate();
-//    }
 
 }
